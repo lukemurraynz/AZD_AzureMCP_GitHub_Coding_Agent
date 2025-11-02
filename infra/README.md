@@ -20,17 +20,29 @@ This deployment follows the [Azure Cloud Adoption Framework naming conventions](
 
 ### Storage Account Naming Convention
 
-**Format**: `st<city><environment><instance>`
+**Format**: `st<cityabbrev><environment><instance>`
 
-**Example**: `staucklandprod001`
+**Example**: `stakl prod001`
 
 - **Prefix**: `st` (Storage Account abbreviation)
-- **City**: New Zealand city name (lowercase, no hyphens)
+- **City Abbreviation**: 3-letter code for the city (e.g., `akl` for Auckland)
 - **Environment**: `prod`, `dev`, or `test`
 - **Instance**: Three-digit instance number (e.g., `001`)
 
+**City Abbreviations Mapping**:
+- Auckland → `akl`
+- Wellington → `wlg`
+- Christchurch → `chc`
+- Hamilton → `hlt`
+- Tauranga → `trg`
+- Napier → `npr`
+- Dunedin → `dud`
+- Palmerston North → `pmr`
+- Nelson → `nsn`
+- Rotorua → `rot`
+
 **Constraints**:
-- 3-24 characters total
+- 3-24 characters total (abbreviations ensure we stay within this limit)
 - Lowercase letters and numbers only
 - Must be globally unique across Azure
 - No hyphens, underscores, or special characters

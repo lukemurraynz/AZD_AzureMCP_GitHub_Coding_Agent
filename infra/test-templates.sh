@@ -89,11 +89,45 @@ fi
 
 # Test 5: Validate storage account naming pattern
 echo -e "\n${YELLOW}Test 5: Validating storage account naming pattern...${NC}"
-ST_PATTERN="st\${city}\${environment}001"
+ST_PATTERN="st\${nzCityAbbreviations\[i\]}\${environment}001"
 if grep -q "$ST_PATTERN" infra/nz-resource-groups.bicep; then
-    echo -e "${GREEN}✓ Storage account naming follows convention: st<city><env>001${NC}"
+    echo -e "${GREEN}✓ Storage account naming follows convention: st<cityabbrev><env>001${NC}"
 else
     echo -e "${RED}✗ Storage account naming pattern not found${NC}"
+    exit 1
+fi
+
+# Test 5b: Validate all storage account names are within 24 character limit
+echo -e "\n${YELLOW}Test 5b: Validating storage account name lengths...${NC}"
+CITY_ABBREVS=(
+    "akl"
+    "wlg"
+    "chc"
+    "hlt"
+    "trg"
+    "npr"
+    "dud"
+    "pmr"
+    "nsn"
+    "rot"
+)
+
+MAX_LENGTH_VIOLATIONS=0
+for abbrev in "${CITY_ABBREVS[@]}"; do
+    # Calculate length: st + abbrev + prod + 001 = 2 + 3 + 4 + 3 = 12 characters
+    NAME_LENGTH=$((2 + ${#abbrev} + 4 + 3))
+    if [ $NAME_LENGTH -le 24 ]; then
+        echo -e "  ${GREEN}✓ st${abbrev}prod001 = ${NAME_LENGTH} chars (within limit)${NC}"
+    else
+        echo -e "  ${RED}✗ st${abbrev}prod001 = ${NAME_LENGTH} chars (exceeds 24)${NC}"
+        MAX_LENGTH_VIOLATIONS=$((MAX_LENGTH_VIOLATIONS + 1))
+    fi
+done
+
+if [ $MAX_LENGTH_VIOLATIONS -eq 0 ]; then
+    echo -e "${GREEN}✓ All storage account names within 24-character limit${NC}"
+else
+    echo -e "${RED}✗ ${MAX_LENGTH_VIOLATIONS} storage account names exceed the limit${NC}"
     exit 1
 fi
 
@@ -133,7 +167,7 @@ else
     echo -e "  ${RED}✗ Blob public access not disabled${NC}"
 fi
 
-if grep -q "enabled: true" infra/storage-account.bicep; then
+if grep -A 10 "encryption:" infra/storage-account.bicep | grep -q "enabled: true"; then
     echo -e "  ${GREEN}✓ Encryption enabled${NC}"
     SECURITY_CHECKS=$((SECURITY_CHECKS + 1))
 else

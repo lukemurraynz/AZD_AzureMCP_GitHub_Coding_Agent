@@ -23,6 +23,20 @@ var nzCities = [
   'rotorua'
 ]
 
+@description('Abbreviated city names for storage account naming (must keep total length under 24 chars)')
+var nzCityAbbreviations = [
+  'akl'        // auckland
+  'wlg'        // wellington
+  'chc'        // christchurch
+  'hlt'        // hamilton
+  'trg'        // tauranga
+  'npr'        // napier
+  'dud'        // dunedin
+  'pmr'        // palmerstonnorth
+  'nsn'        // nelson
+  'rot'        // rotorua
+]
+
 // Create Resource Groups for each NZ city following naming convention: rg-<city>-<environment>-<region>-001
 resource resourceGroups 'Microsoft.Resources/resourceGroups@2024-03-01' = [for (city, i) in nzCities: {
   name: 'rg-${city}-${environment}-${location}-001'
@@ -36,13 +50,14 @@ resource resourceGroups 'Microsoft.Resources/resourceGroups@2024-03-01' = [for (
   }
 }]
 
-// Create Storage Accounts in each Resource Group following naming convention: st<city><environment>001
+// Create Storage Accounts in each Resource Group following naming convention: st<cityabbrev><environment>001
 // Note: Storage account names must be 3-24 characters, lowercase letters and numbers only
+// Using abbreviated city names to stay within the 24-character limit
 module storageAccounts 'storage-account.bicep' = [for (city, i) in nzCities: {
   name: 'deploy-storage-${city}'
   scope: resourceGroups[i]
   params: {
-    storageAccountName: 'st${city}${environment}001'
+    storageAccountName: 'st${nzCityAbbreviations[i]}${environment}001'
     location: location
     city: city
     environment: environment
@@ -50,4 +65,4 @@ module storageAccounts 'storage-account.bicep' = [for (city, i) in nzCities: {
 }]
 
 output resourceGroupNames array = [for (city, i) in nzCities: resourceGroups[i].name]
-output storageAccountNames array = [for (city, i) in nzCities: 'st${city}${environment}001']
+output storageAccountNames array = [for (city, i) in nzCities: 'st${nzCityAbbreviations[i]}${environment}001']
