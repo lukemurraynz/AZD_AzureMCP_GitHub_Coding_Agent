@@ -10,20 +10,20 @@ Successfully deployed **20 Azure resources** across **10 Resource Groups** in th
 
 ### Resource Groups Created (10)
 
-All resource groups follow the naming convention: `rg-<city>-prod-australiaeast-001`
+All resource groups follow the naming convention: `rg-<city>-prod-newzealandnorth-001`
 
 | # | Resource Group Name | Location | Status |
 |---|---------------------|----------|--------|
-| 1 | rg-auckland-prod-australiaeast-001 | australiaeast | ✅ Created |
-| 2 | rg-wellington-prod-australiaeast-001 | australiaeast | ✅ Created |
-| 3 | rg-christchurch-prod-australiaeast-001 | australiaeast | ✅ Created |
-| 4 | rg-hamilton-prod-australiaeast-001 | australiaeast | ✅ Created |
-| 5 | rg-tauranga-prod-australiaeast-001 | australiaeast | ✅ Created |
-| 6 | rg-napier-prod-australiaeast-001 | australiaeast | ✅ Created |
-| 7 | rg-dunedin-prod-australiaeast-001 | australiaeast | ✅ Created |
-| 8 | rg-palmerstonnorth-prod-australiaeast-001 | australiaeast | ✅ Created |
-| 9 | rg-nelson-prod-australiaeast-001 | australiaeast | ✅ Created |
-| 10 | rg-rotorua-prod-australiaeast-001 | australiaeast | ✅ Created |
+| 1 | rg-auckland-prod-newzealandnorth-001 | newzealandnorth | ✅ Created |
+| 2 | rg-wellington-prod-newzealandnorth-001 | newzealandnorth | ✅ Created |
+| 3 | rg-christchurch-prod-newzealandnorth-001 | newzealandnorth | ✅ Created |
+| 4 | rg-hamilton-prod-newzealandnorth-001 | newzealandnorth | ✅ Created |
+| 5 | rg-tauranga-prod-newzealandnorth-001 | newzealandnorth | ✅ Created |
+| 6 | rg-napier-prod-newzealandnorth-001 | newzealandnorth | ✅ Created |
+| 7 | rg-dunedin-prod-newzealandnorth-001 | newzealandnorth | ✅ Created |
+| 8 | rg-palmerstonnorth-prod-newzealandnorth-001 | newzealandnorth | ✅ Created |
+| 9 | rg-nelson-prod-newzealandnorth-001 | newzealandnorth | ✅ Created |
+| 10 | rg-rotorua-prod-newzealandnorth-001 | newzealandnorth | ✅ Created |
 
 ### Storage Accounts Created (10)
 
@@ -31,16 +31,16 @@ All storage accounts follow the naming convention: `st<cityabbrev>prod001`
 
 | # | Storage Account | City | Resource Group | SKU | Status |
 |---|-----------------|------|----------------|-----|--------|
-| 1 | staklprod001 | Auckland | rg-auckland-prod-australiaeast-001 | Standard_LRS | ✅ Created |
-| 2 | stwlgprod001 | Wellington | rg-wellington-prod-australiaeast-001 | Standard_LRS | ✅ Created |
-| 3 | stchcprod001 | Christchurch | rg-christchurch-prod-australiaeast-001 | Standard_LRS | ✅ Created |
-| 4 | sthltprod001 | Hamilton | rg-hamilton-prod-australiaeast-001 | Standard_LRS | ✅ Created |
-| 5 | sttrgprod001 | Tauranga | rg-tauranga-prod-australiaeast-001 | Standard_LRS | ✅ Created |
-| 6 | stnprprod001 | Napier | rg-napier-prod-australiaeast-001 | Standard_LRS | ✅ Created |
-| 7 | stdudprod001 | Dunedin | rg-dunedin-prod-australiaeast-001 | Standard_LRS | ✅ Created |
-| 8 | stpmrprod001 | Palmerston North | rg-palmerstonnorth-prod-australiaeast-001 | Standard_LRS | ✅ Created |
-| 9 | stnsnprod001 | Nelson | rg-nelson-prod-australiaeast-001 | Standard_LRS | ✅ Created |
-| 10 | strotprod001 | Rotorua | rg-rotorua-prod-australiaeast-001 | Standard_LRS | ✅ Created |
+| 1 | staklprod001 | Auckland | rg-auckland-prod-newzealandnorth-001 | Standard_LRS | ✅ Created |
+| 2 | stwlgprod001 | Wellington | rg-wellington-prod-newzealandnorth-001 | Standard_LRS | ✅ Created |
+| 3 | stchcprod001 | Christchurch | rg-christchurch-prod-newzealandnorth-001 | Standard_LRS | ✅ Created |
+| 4 | sthltprod001 | Hamilton | rg-hamilton-prod-newzealandnorth-001 | Standard_LRS | ✅ Created |
+| 5 | sttrgprod001 | Tauranga | rg-tauranga-prod-newzealandnorth-001 | Standard_LRS | ✅ Created |
+| 6 | stnprprod001 | Napier | rg-napier-prod-newzealandnorth-001 | Standard_LRS | ✅ Created |
+| 7 | stdudprod001 | Dunedin | rg-dunedin-prod-newzealandnorth-001 | Standard_LRS | ✅ Created |
+| 8 | stpmrprod001 | Palmerston North | rg-palmerstonnorth-prod-newzealandnorth-001 | Standard_LRS | ✅ Created |
+| 9 | stnsnprod001 | Nelson | rg-nelson-prod-newzealandnorth-001 | Standard_LRS | ✅ Created |
+| 10 | strotprod001 | Rotorua | rg-rotorua-prod-newzealandnorth-001 | Standard_LRS | ✅ Created |
 
 ## Configuration Details
 

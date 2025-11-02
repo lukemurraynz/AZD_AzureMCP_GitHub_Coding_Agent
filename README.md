@@ -14,7 +14,7 @@ This repository contains Infrastructure as Code (IaC) for deploying Azure Resour
 
 # Preview the deployment
 az deployment sub what-if \
-  --location australiaeast \
+  --location newzealandnorth \
   --template-file infra/nz-resource-groups.bicep \
   --parameters environment=prod
 
@@ -37,7 +37,7 @@ See [infra/README.md](infra/README.md) for complete documentation, naming conven
 ### Naming Conventions
 
 - **Resource Groups**: `rg-<city>-<environment>-<region>-001`
-  - Example: `rg-auckland-prod-australiaeast-001`
+  - Example: `rg-auckland-prod-newzealandnorth-001`
   
 - **Storage Accounts**: `st<cityabbrev><environment>001`
   - Example: `staklprod001` (Auckland)

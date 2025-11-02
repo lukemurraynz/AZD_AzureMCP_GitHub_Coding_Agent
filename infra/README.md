@@ -10,12 +10,12 @@ This deployment follows the [Azure Cloud Adoption Framework naming conventions](
 
 **Format**: `rg-<city>-<environment>-<region>-<instance>`
 
-**Example**: `rg-auckland-prod-australiaeast-001`
+**Example**: `rg-auckland-prod-newzealandnorth-001`
 
 - **Prefix**: `rg-` (Resource Group abbreviation)
 - **City**: New Zealand city name (lowercase)
 - **Environment**: `prod`, `dev`, or `test`
-- **Region**: Azure region (e.g., `australiaeast`)
+- **Region**: Azure region (e.g., `newzealandnorth`)
 - **Instance**: Three-digit instance number (e.g., `001`)
 
 ### Storage Account Naming Convention
@@ -82,9 +82,9 @@ az account set --subscription "your-subscription-id"
 # Deploy the Bicep template at subscription scope
 az deployment sub create \
   --name nz-resources-deployment \
-  --location australiaeast \
+  --location newzealandnorth \
   --template-file infra/nz-resource-groups.bicep \
-  --parameters location=australiaeast environment=prod
+  --parameters location=newzealandnorth environment=prod
 ```
 
 ### Option 2: Preview deployment (What-If)
@@ -94,9 +94,9 @@ Before deploying, you can preview what changes will be made:
 ```bash
 az deployment sub what-if \
   --name nz-resources-deployment \
-  --location australiaeast \
+  --location newzealandnorth \
   --template-file infra/nz-resource-groups.bicep \
-  --parameters location=australiaeast environment=prod
+  --parameters location=newzealandnorth environment=prod
 ```
 
 ### Option 3: Deploy to a different environment
@@ -105,16 +105,16 @@ az deployment sub what-if \
 # Deploy to development environment
 az deployment sub create \
   --name nz-resources-dev-deployment \
-  --location australiaeast \
+  --location newzealandnorth \
   --template-file infra/nz-resource-groups.bicep \
-  --parameters location=australiaeast environment=dev
+  --parameters location=newzealandnorth environment=dev
 ```
 
 ## Parameters
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| `location` | string | `australiaeast` | The Azure region where resources will be deployed |
+| `location` | string | `newzealandnorth` | The Azure region where resources will be deployed |
 | `environment` | string | `prod` | Environment name (prod, dev, test) |
 
 ## Resources Created

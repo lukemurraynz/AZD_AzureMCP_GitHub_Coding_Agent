@@ -6,18 +6,18 @@ This deployment will create **20 Azure resources** across **10 Resource Groups**
 
 ### Resource Groups (10)
 
-Each resource group follows the naming convention: `rg-<city>-prod-australiaeast-001`
+Each resource group follows the naming convention: `rg-<city>-prod-newzealandnorth-001`
 
-1. **rg-auckland-prod-australiaeast-001**
-2. **rg-wellington-prod-australiaeast-001**
-3. **rg-christchurch-prod-australiaeast-001**
-4. **rg-hamilton-prod-australiaeast-001**
-5. **rg-tauranga-prod-australiaeast-001**
-6. **rg-napier-prod-australiaeast-001**
-7. **rg-dunedin-prod-australiaeast-001**
-8. **rg-palmerstonnorth-prod-australiaeast-001**
-9. **rg-nelson-prod-australiaeast-001**
-10. **rg-rotorua-prod-australiaeast-001**
+1. **rg-auckland-prod-newzealandnorth-001**
+2. **rg-wellington-prod-newzealandnorth-001**
+3. **rg-christchurch-prod-newzealandnorth-001**
+4. **rg-hamilton-prod-newzealandnorth-001**
+5. **rg-tauranga-prod-newzealandnorth-001**
+6. **rg-napier-prod-newzealandnorth-001**
+7. **rg-dunedin-prod-newzealandnorth-001**
+8. **rg-palmerstonnorth-prod-newzealandnorth-001**
+9. **rg-nelson-prod-newzealandnorth-001**
+10. **rg-rotorua-prod-newzealandnorth-001**
 
 ### Storage Accounts (10)
 
@@ -25,16 +25,16 @@ Each storage account follows the naming convention: `st<cityabbrev>prod001`
 
 | City | Abbreviation | Storage Account Name | Resource Group |
 |------|--------------|---------------------|----------------|
-| Auckland | akl | **staklprod001** | rg-auckland-prod-australiaeast-001 |
-| Wellington | wlg | **stwlgprod001** | rg-wellington-prod-australiaeast-001 |
-| Christchurch | chc | **stchcprod001** | rg-christchurch-prod-australiaeast-001 |
-| Hamilton | hlt | **sthltprod001** | rg-hamilton-prod-australiaeast-001 |
-| Tauranga | trg | **sttrgprod001** | rg-tauranga-prod-australiaeast-001 |
-| Napier | npr | **stnprprod001** | rg-napier-prod-australiaeast-001 |
-| Dunedin | dud | **stdudprod001** | rg-dunedin-prod-australiaeast-001 |
-| Palmerston North | pmr | **stpmrprod001** | rg-palmerstonnorth-prod-australiaeast-001 |
-| Nelson | nsn | **stnsnprod001** | rg-nelson-prod-australiaeast-001 |
-| Rotorua | rot | **strotprod001** | rg-rotorua-prod-australiaeast-001 |
+| Auckland | akl | **staklprod001** | rg-auckland-prod-newzealandnorth-001 |
+| Wellington | wlg | **stwlgprod001** | rg-wellington-prod-newzealandnorth-001 |
+| Christchurch | chc | **stchcprod001** | rg-christchurch-prod-newzealandnorth-001 |
+| Hamilton | hlt | **sthltprod001** | rg-hamilton-prod-newzealandnorth-001 |
+| Tauranga | trg | **sttrgprod001** | rg-tauranga-prod-newzealandnorth-001 |
+| Napier | npr | **stnprprod001** | rg-napier-prod-newzealandnorth-001 |
+| Dunedin | dud | **stdudprod001** | rg-dunedin-prod-newzealandnorth-001 |
+| Palmerston North | pmr | **stpmrprod001** | rg-palmerstonnorth-prod-newzealandnorth-001 |
+| Nelson | nsn | **stnsnprod001** | rg-nelson-prod-newzealandnorth-001 |
+| Rotorua | rot | **strotprod001** | rg-rotorua-prod-newzealandnorth-001 |
 
 ## Resource Configuration
 
@@ -68,7 +68,7 @@ All resources include the following tags:
 
 ## Deployment Location
 
-- **Region**: Australia East (`australiaeast`)
+- **Region**: Australia East (`newzealandnorth`)
 - **Reason**: Closest Azure region to New Zealand for optimal latency
 
 ## Estimated Cost

@@ -37,7 +37,7 @@ SUBSCRIPTION=$(az account show --query name -o tsv)
 echo -e "${GREEN}Current subscription: ${SUBSCRIPTION}${NC}"
 
 # Set default values
-LOCATION="${LOCATION:-australiaeast}"
+LOCATION="${LOCATION:-newzealandnorth}"
 ENVIRONMENT="${ENVIRONMENT:-prod}"
 DEPLOYMENT_NAME="nz-resources-${ENVIRONMENT}-$(date +%Y%m%d-%H%M%S)"
 

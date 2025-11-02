@@ -4,7 +4,7 @@
 targetScope = 'subscription'
 
 @description('The Azure region where resources will be deployed')
-param location string = 'australiaeast'
+param location string = 'newzealandnorth'
 
 @description('Environment name (e.g., prod, dev, test)')
 param environment string = 'prod'
