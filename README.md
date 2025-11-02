@@ -2,6 +2,8 @@
 
 Azure Developer CLI Coding Agent repo. Used for testing functionality.
 
+Blog article: [Automate Azure Access for GitHub Copilot with AZD](https://luke.geek.nz/azure/azd-github-copilot-coding-agent-azure-mcp-server/)
+
 ## New Zealand Azure Resource Groups
 
 This repository contains Infrastructure as Code (IaC) for deploying Azure Resource Groups and Storage Accounts based on the main cities of New Zealand.
